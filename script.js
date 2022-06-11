@@ -39,4 +39,37 @@ function create_divs(num_of_divs) {
     }
 }
 
+// function delete_canvas() {
+//     const the_squares = document.querySelectorAll('.square');
+//     the_squares.forEach((each_square) => {
+//         each_square.remove();
+//     });
+// }
+
+// const change_btn = document.querySelector('#change-btn');
+// change_btn.addEventListener('click', () => {
+//     delete_canvas();
+//     how_many = prompt("How many squares do you want on each side of the canvas?");
+//     create_divs(Number(how_many));
+//     const squares = document.querySelectorAll('.square');
+// });
+
 create_divs(16);
+
+const squares = document.querySelectorAll('.square');
+// let color_picker = document.querySelector('#color-picker');
+
+// color_picker.addEventListener('change', function (e) {
+//     console.log('working');
+//     let color = e.target.value;
+// });
+// let color = document.querySelector('#color-picker').value;
+
+squares.forEach((square) => {
+    square.addEventListener('mouseover', () => {
+        square.style.background = '#463f3a';
+    });
+    // square.addEventListener('mouseout', () => {
+    //     square.style.background = '#fff';
+    // });
+});
